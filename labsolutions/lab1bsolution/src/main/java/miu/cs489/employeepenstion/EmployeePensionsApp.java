@@ -8,11 +8,11 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 
 public class EmployeePensionsApp {
 
     public static void printEmployee(List<Employee> employees){
+        System.out.println("TaskA: Print all employees\n----");
         int n = employees.size();
         int i=0;
         employees.stream()
@@ -31,13 +31,15 @@ public class EmployeePensionsApp {
         }
     }
     public static void printMonthlyUpcomingEnroll(List<Employee> employees){
-        System.out.println("Monthly Upcoming Enroll\n-----");
+        System.out.println("TaskB: Monthly Upcoming Enroll\n-----");
         int n = employees.size();
         int i=0;
+        LocalDate referenceDate = LocalDate.now().withDayOfMonth(1).plusMonths(1).minusDays(1);
         for(Employee e: employees){
-            Period duration = Period.between(e.getEmploymentDate(),LocalDate.of(2023,11,30));
-            int year = duration.getYears();
-            if(year>=5){
+//            Period duration = Period.between(e.getEmploymentDate(),LocalDate.of(2023,11,30));
+//            int year = duration.getYears();
+            if(isEligibleForUpcomingEnrollment(referenceDate,e)){
+
                 if(e.getPensionPlan() == null){
                     e.setPensionPlan(new PensionPlan("",LocalDate.now(),0));
                 }
@@ -49,6 +51,14 @@ public class EmployeePensionsApp {
             }
 
         }
+    }
+
+    public static boolean isEligibleForUpcomingEnrollment(LocalDate referenceDate, Employee e) {
+        LocalDate enrollmentCutoffDate = e.getEmploymentDate().plusYears(5).plusMonths(1); //add 5 ys and 1 month
+
+        return e.getEmploymentDate().isBefore(referenceDate) &&
+                enrollmentCutoffDate.isAfter(referenceDate) &&
+                e.getPensionPlan().getEnrollmentDate() == null;
     }
     public static void main(String[] args) {
 
@@ -69,12 +79,10 @@ public class EmployeePensionsApp {
         employees.add(employee3);
         employees.add(employee4);
 
+
         //print all employees
         printEmployee(employees);
         printMonthlyUpcomingEnroll(employees);
-
-
-
 
 
     }
