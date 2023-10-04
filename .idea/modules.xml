@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" filepath="$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cs489-appsd.iml" filepath="$PROJECT_DIR$/.idea/cs489-appsd.iml" />
-      <module fileurl="file://$PROJECT_DIR$/task4/task4.iml" filepath="$PROJECT_DIR$/task4/task4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" filepath="$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" filepath="$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" />
     </modules>
   </component>
 </project>
