@@ -4,6 +4,7 @@ import miu.cs489.employeepenstion.model.Employee;
 import miu.cs489.employeepenstion.model.PensionPlan;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -30,7 +31,24 @@ public class EmployeePensionsApp {
         }
     }
     public static void printMonthlyUpcomingEnroll(List<Employee> employees){
+        System.out.println("Monthly Upcoming Enroll\n-----");
+        int n = employees.size();
+        int i=0;
+        for(Employee e: employees){
+            Period duration = Period.between(e.getEmploymentDate(),LocalDate.of(2023,11,30));
+            int year = duration.getYears();
+            if(year>=5){
+                if(e.getPensionPlan() == null){
+                    e.setPensionPlan(new PensionPlan("",LocalDate.now(),0));
+                }
+                if(i==n-1){
+                    System.out.println(e.toJSON());
+                }else{
+                    System.out.printf(e.toJSON()+ "%s\n",",");
+                }
+            }
 
+        }
     }
     public static void main(String[] args) {
 
@@ -53,6 +71,7 @@ public class EmployeePensionsApp {
 
         //print all employees
         printEmployee(employees);
+        printMonthlyUpcomingEnroll(employees);
 
 
 
