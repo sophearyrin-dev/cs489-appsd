@@ -36,9 +36,10 @@ public class EmployeePensionsApp {
         int i=0;
         LocalDate referenceDate = LocalDate.now().withDayOfMonth(1).plusMonths(1).minusDays(1);
         for(Employee e: employees){
-//            Period duration = Period.between(e.getEmploymentDate(),LocalDate.of(2023,11,30));
-//            int year = duration.getYears();
-            if(isEligibleForUpcomingEnrollment(referenceDate,e)){
+            Period duration = Period.between(e.getEmploymentDate(),LocalDate.of(2023,11,30));
+            int year = duration.getYears();
+//            System.out.println(year);
+            if(year >=5 && e.getPensionPlan().getPlanReferenceNumber()==""){
 
                 if(e.getPensionPlan() == null){
                     e.setPensionPlan(new PensionPlan("",LocalDate.now(),0));
