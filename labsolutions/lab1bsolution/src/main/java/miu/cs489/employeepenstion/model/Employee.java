@@ -1,11 +1,9 @@
 package miu.cs489.employeepenstion.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.time.LocalDate;
 
 @Data
@@ -18,14 +16,19 @@ public class Employee {
     private String lastName;
     private LocalDate employmentDate;
     private Double yearlySalary;
+
+    //one employee has only one pensionPlan
     private PensionPlan pensionPlan;
 
-    public Employee(Long employeeId, String firstName, String lastName, LocalDate employmentDate, Double yearlySalary) {
+    //TODO: put all fields of PensionPlan inside the Employee constructor
+    public Employee(Long employeeId, String firstName, String lastName, LocalDate employmentDate, Double yearlySalary
+    , String planReferenceNumber, LocalDate enrollmentDate, double monthlyContribution) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.employmentDate = employmentDate;
         this.yearlySalary = yearlySalary;
+        this.pensionPlan = planReferenceNumber == null ? null : new PensionPlan(planReferenceNumber,enrollmentDate,monthlyContribution);
     }
 
     public String toJSON(){

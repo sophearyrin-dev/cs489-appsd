@@ -13,7 +13,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CustomerMGTCLIAPP" target="17" />
-      <module name="lab1bsolution" target="8" />
+      <module name="lab1bsolution" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>
