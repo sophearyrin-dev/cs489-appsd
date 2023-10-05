@@ -7,13 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eLibrary" />
         <module name="CustomerMGTCLIAPP" />
         <module name="lab1bsolution" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CustomerMGTCLIAPP" target="17" />
+      <module name="eLibrary" target="17" />
       <module name="lab1bsolution" target="10" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eLibrary" options="-parameters" />
+    </option>
   </component>
 </project>
