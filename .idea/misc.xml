@@ -6,10 +6,11 @@
         <option value="$PROJECT_DIR$/lessons/lesson1b-build-automation/pom.xml" />
         <option value="$PROJECT_DIR$/labsolutions/lab1bsolution/pom.xml" />
         <option value="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1.Create Spring Application/project/pom.xml" />
+        <option value="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

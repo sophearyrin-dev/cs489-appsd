@@ -1,7 +1,6 @@
 package miu.cs489.employeepenstion;
 
 import miu.cs489.employeepenstion.model.Employee;
-import miu.cs489.employeepenstion.model.PensionPlan;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
