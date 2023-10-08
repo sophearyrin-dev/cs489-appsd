@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/cs489-appsd.iml" filepath="$PROJECT_DIR$/.idea/cs489-appsd.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" filepath="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" filepath="$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" filepath="$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" filepath="$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" />
     </modules>
   </component>

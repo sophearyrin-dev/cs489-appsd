@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="student-mongo" />
         <module name="eLibrary" />
         <module name="CustomerMGTCLIAPP" />
         <module name="lab1bsolution" />
@@ -16,11 +17,13 @@
       <module name="CustomerMGTCLIAPP" target="17" />
       <module name="eLibrary" target="17" />
       <module name="lab1bsolution" target="10" />
+      <module name="student-mongo" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eLibrary" options="-parameters" />
+      <module name="student-mongo" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "John Smith",
+    "age": 20,
+    "gender": "Male",
+    "major": "Computer Science",
+    "courses": ["Mathematics", "Programming", "Database"],
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "12345"
+    }
+  },
+  {
+    "name": "Alice Johnson",
+    "age": 22,
+    "gender": "Female",
+    "major": "Biology",
+    "courses": ["Biology", "Chemistry", "Anatomy"],
+    "address": {
+      "street": "456 Elm St",
+      "city": "Another City",
+      "state": "NY",
+      "zip": "67890"
+    }
+  },
+  {
+    "name": "Bob Anderson",
+    "age": 21,
+    "gender": "Male",
+    "major": "History",
+    "courses": ["World History", "US History", "European History"],
+    "address": {
+      "street": "789 Oak St",
+      "city": "Some City",
+      "state": "TX",
+      "zip": "54321"
+    }
+  }
+]
