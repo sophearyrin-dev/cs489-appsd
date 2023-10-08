@@ -3,6 +3,7 @@ package edu.miu.cs.cs489.lab1b.employeepensionplansmgmtapp;
 import edu.miu.cs.cs489.lab1b.employeepensionplansmgmtapp.model.Employee;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -19,7 +20,15 @@ public class EmployeePensionPlansMgmtApp
                 new Employee(3L, "Carly", "Agar", LocalDate.of(2014,5,16), 842000.75, "SM2307", LocalDate.of(2019,11,4), 1555.50),
                 new Employee(4L, "Wesley", "Schneider", LocalDate.of(2018,11,2), 74500.00, null, null, null)
         );
+
+//        printAllEmployees(employees);
         printMonthlyUpcomingEnrollees(employees);
+    }
+
+    private static void printAllEmployees(List<Employee> employees) {
+        employees.stream()
+                .sorted(Comparator.comparing(Employee::getLastName).thenComparing(Employee::getYearlySalary, Comparator.reverseOrder()))
+                .forEach(System.out::println);
     }
 
     private static void printMonthlyUpcomingEnrollees(List<Employee> employees) {
