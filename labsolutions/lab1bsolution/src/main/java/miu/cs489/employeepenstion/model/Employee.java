@@ -76,9 +76,13 @@ public class Employee {
 
     public boolean isUpcomingEnrollee() {
         var nextMonthDate = LocalDate.now().plusMonths(1L);
+//        System.out.println("nextMonthDate" + nextMonthDate);
         var nextMonthsYear = nextMonthDate.getYear();
+//        System.out.println("nextMonthsYear" + nextMonthsYear);
         var nextMonthsMonth = nextMonthDate.getMonth();
+//        System.out.println("nextMonthsMonth"+ nextMonthsMonth);
         var enrollQualificationDate = employmentDate.plusYears(5L);
+//        System.out.println("enrollQualificationDate"+enrollQualificationDate);
         return ((enrollQualificationDate.getYear() == nextMonthsYear)
                 && (enrollQualificationDate.getMonth().equals(nextMonthsMonth))
                 && (pensionPlan == null)

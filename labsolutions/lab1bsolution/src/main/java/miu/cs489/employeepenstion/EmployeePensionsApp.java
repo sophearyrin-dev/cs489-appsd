@@ -2,10 +2,9 @@ package miu.cs489.employeepenstion;
 
 import miu.cs489.employeepenstion.model.Employee;
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class EmployeePensionsApp
 {
@@ -24,13 +23,16 @@ public class EmployeePensionsApp
     }
 
     private static void printAllEmployees(List<Employee> employees) {
+
         employees.stream()
-                .sorted(Comparator.comparing(Employee::getLastName).thenComparing(Employee::getYearlySalary, Comparator.reverseOrder()))
-                .forEach(System.out::println);
+                        .sorted(Comparator.comparing(Employee::getLastName)
+                                .thenComparing(Employee::getYearlySalary, Comparator.reverseOrder()))
+                        .forEach(System.out::println);
     }
 
     private static void printMonthlyUpcomingEnrollees(List<Employee> employees) {
-        // TODO Sort
+        // TODO Sort: The list to be displayed sorted in ascending order of the Employees’ employment dates
+        employees.stream().sorted(Comparator.comparing(Employee::getEmploymentDate));
         employees.stream().filter(Employee::isUpcomingEnrollee)
                 .forEach(System.out::println);
     }
