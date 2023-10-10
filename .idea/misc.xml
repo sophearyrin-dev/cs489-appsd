@@ -8,11 +8,13 @@
         <option value="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1.Create Spring Application/project/pom.xml" />
         <option value="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/pom.xml" />
         <option value="$PROJECT_DIR$/lessons/lesson5-mongodb/pom.xml" />
-        <option value="$PROJECT_DIR$/quiz1new/pom.xml" />
+        <option value="$PROJECT_DIR$/lessons/lesson5-datapersistence/pom.xml" />
+        <option value="$PROJECT_DIR$/elibrayapp/pom.xml" />
+        <option value="$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
