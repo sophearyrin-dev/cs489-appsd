@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" filepath="$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" filepath="$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" />
       <module fileurl="file://$PROJECT_DIR$/bankapplication/bankapplication.iml" filepath="$PROJECT_DIR$/bankapplication/bankapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cs489-appsd.iml" filepath="$PROJECT_DIR$/.idea/cs489-appsd.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" filepath="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" />
