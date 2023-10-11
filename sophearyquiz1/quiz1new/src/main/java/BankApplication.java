@@ -23,10 +23,14 @@ public class BankApplication {
                 .filter(Customer::isQualified) // Filter Platinum Account Customers
                 .sorted(Comparator
                         .comparing(Customer::getAccount, Comparator
-                                .comparing(Account::getBalance)
-                                .reversed()
+                                .comparing(Account::getBalance, Comparator.reverseOrder())
                                 .thenComparing(Account::getAccountNo)))
                 .collect(Collectors.toList());
+
+//        List<Customer> platinumCustomers = customers.stream()
+//                        .filter(c -> c.isQualified())
+//                                .sorted(Comparator.comparing(c->c.getAccount().getBalance())
+//                                        .thenComparing(Customer c-> ))
 
         platinumCustomers.forEach(e -> System.out.println(e.toJsonFormat()));
 

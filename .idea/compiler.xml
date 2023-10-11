@@ -9,14 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="student-mongo" />
         <module name="eLibrary" />
-        <module name="elibrayapp" />
         <module name="bank" />
         <module name="CustomerMGTCLIAPP" />
         <module name="lab1bsolution" />
+        <module name="elibrayapp" />
+        <module name="banking-cli-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bank" target="17" />
+      <module name="banking-cli-app" target="17" />
       <module name="CustomerMGTCLIAPP" target="17" />
       <module name="eLibrary" target="17" />
       <module name="elibrayapp" target="17" />
