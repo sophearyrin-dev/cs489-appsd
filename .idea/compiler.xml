@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="student-mongo" />
+        <module name="supplierproductapplication" />
         <module name="eLibrary" />
         <module name="bank" />
         <module name="CustomerMGTCLIAPP" />
@@ -24,6 +25,7 @@
       <module name="elibrayapp" target="17" />
       <module name="lab1bsolution" target="10" />
       <module name="student-mongo" target="17" />
+      <module name="supplierproductapplication" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

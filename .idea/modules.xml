@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" filepath="$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" filepath="$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" filepath="$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midterm/supplierproductapplication.iml" filepath="$PROJECT_DIR$/midterm/supplierproductapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" filepath="$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" />
     </modules>
   </component>

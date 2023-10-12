@@ -31,7 +31,7 @@ public class Customer {
     public String toJSONString() {
         return String.format(
                 """
-                        {
+                        \t{
                         		"customerId":%d,
                         		"firstName":%s,
                         		"lastName":%s,
@@ -39,9 +39,9 @@ public class Customer {
                         		"account": {
                         			"accountNo":%s,
                         			"dateOpened":%s,
-                        			"balance":%.2f
+                        			"balance":%,.2f
                         		}
-                        }""",
+                        \t}""",
                 customerId, firstName, lastName, dateOfBirth, account.getAccountNo(),
                 account.getDateOpened(), account.getBalance()
         );

@@ -26,7 +26,9 @@ public class BankApp {
                 LocalDate.of(2013, 10, 10), 950.00)
 
         );
-//        new BankApp().printAllCustomers(customers);
+        System.out.println("printAllCustomers");
+        new BankApp().printAllCustomers(customers);
+        System.out.println("printPlatinumAccountCustomers");
         new BankApp().printPlatinumAccountCustomers(customers);
     }
 
@@ -37,7 +39,7 @@ public class BankApp {
                     .sorted(Comparator.comparing(Customer::getLastName));
 //            sortedCustomers.forEach(customer -> System.out.println(customer.toJSONString()));
             System.out.println(sortedCustomers.map(c -> c.toJSONString())
-                            .collect(Collectors.joining(",")));
+                            .collect(Collectors.joining(",\n")));
             System.out.println("]");
         } else {
             System.out.println("[]");
