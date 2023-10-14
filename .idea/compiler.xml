@@ -9,15 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="student-mongo" />
         <module name="supplierproductapplication" />
+        <module name="studentapp" />
         <module name="eLibrary" />
         <module name="bank" />
         <module name="CustomerMGTCLIAPP" />
         <module name="lab1bsolution" />
         <module name="elibrayapp" />
+        <module name="ADS_SpringApplication" />
         <module name="banking-cli-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ADS_SpringApplication" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="CustomerMGTCLIAPP" target="17" />
@@ -25,14 +28,17 @@
       <module name="elibrayapp" target="17" />
       <module name="lab1bsolution" target="10" />
       <module name="student-mongo" target="17" />
+      <module name="studentapp" target="17" />
       <module name="supplierproductapplication" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ADS_SpringApplication" options="-parameters" />
       <module name="eLibrary" options="-parameters" />
       <module name="elibrayapp" options="-parameters" />
       <module name="student-mongo" options="-parameters" />
+      <module name="studentapp" options="-parameters" />
     </option>
   </component>
 </project>

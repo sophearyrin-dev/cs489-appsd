@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab6/ADS_SpringApplication.iml" filepath="$PROJECT_DIR$/labsolutions/lab6/ADS_SpringApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" filepath="$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" />
       <module fileurl="file://$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" filepath="$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" />
       <module fileurl="file://$PROJECT_DIR$/bankapplication/bankapplication.iml" filepath="$PROJECT_DIR$/bankapplication/bankapplication.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" filepath="$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" filepath="$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" filepath="$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lessons/studentspringtest/studentapp.iml" filepath="$PROJECT_DIR$/lessons/studentspringtest/studentapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/midterm/supplierproductapplication.iml" filepath="$PROJECT_DIR$/midterm/supplierproductapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" filepath="$PROJECT_DIR$/labsolutions/lab1solution/task4/task4.iml" />
     </modules>

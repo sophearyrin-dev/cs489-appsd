@@ -27,8 +27,8 @@ public class ElibrayappApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        getAllAddress();
-        insertPublisher();
+//        getAllAddress();
+//        insertPublisher();
 
     }
 
@@ -37,12 +37,12 @@ public class ElibrayappApplication implements CommandLineRunner {
         System.out.println(addresses);
     }
 
-    public void insertPublisher(){
-        Address address1 = new Address("89st","IL", "CA","76543");
-        addressRepository.save(address1);
-        Publisher publisher1 = new Publisher("A", address1);
-        publisherRepository.save(publisher1);
-
-    }
+//    public void insertPublisher(){
+//        Address address1 = new Address("89st","IL", "CA","76543");
+//        addressRepository.save(address1);
+//        Publisher publisher1 = new Publisher("A", address1);
+//        publisherRepository.save(publisher1);
+//
+//    }
 
 }

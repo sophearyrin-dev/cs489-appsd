@@ -1,5 +1,7 @@
 package miu.edu.cs489.project.solution.model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Supplier {
@@ -15,12 +17,20 @@ public class Supplier {
     public Supplier() {
     }
 
-    public Supplier(Long supplierId, String name, String contactPhone, List<Product> productList) {
+    public Supplier(Long supplierId, String name, String contactPhone) {
         this.supplierId = supplierId;
         this.name = name;
         this.contactPhone = contactPhone;
-        this.productList = productList;
+        this.productList = new ArrayList<>();
+//        this.productList.add(addProduct(productNo,proName,dateSupplied,quantitySupplied,unitPrice));
     }
+
+
+    public Product addProduct(Long productNo, String name, LocalDate dateSupplied,
+                              int quantitySupplied, double unitPrice){
+        return new Product(productNo,name,dateSupplied,quantitySupplied,unitPrice);
+    }
+
 
     public Long getSupplierId() {
         return supplierId;
@@ -55,12 +65,26 @@ public class Supplier {
     }
 
     //A Star Supplier is a supplier who has supplied at least 2 Products, and the total dollar value of the products supplied is more than $100,000.00
-    public boolean isStarSupplier() {
-        //1.check product size in each product
-        int supplierProductCount = 0;
+//    public boolean isStarSupplier() {
+//        //1.check product size in each product
+//        int supplierProductCount = 0;
+//
+//        //2.check total price of all product for each supplier
+//        double supplierTotalProductPrice = 0.0;
+//        if (productList != null) {
+//            for (Product product : productList) {
+//                supplierProductCount++;
+//                supplierTotalProductPrice += product.getQuantitySupplied() * product.getUnitPrice();
+//            }
+//        }
+//
+//        return supplierProductCount >= 2 && supplierTotalProductPrice > 100000.00;
+//    }
 
-        //2.check total price of all product for each supplier
+    public boolean isStarSupplier(double totalValueThreshold) {
+        int supplierProductCount = 0;
         double supplierTotalProductPrice = 0.0;
+
         if (productList != null) {
             for (Product product : productList) {
                 supplierProductCount++;
@@ -68,8 +92,9 @@ public class Supplier {
             }
         }
 
-        return supplierProductCount >= 2 && supplierTotalProductPrice > 100000.00;
+        return supplierProductCount >= 2 && supplierTotalProductPrice > totalValueThreshold;
     }
+
 
     @Override
     public String toString() {

@@ -22,6 +22,7 @@ public class Address {
 
     private String state;
 
+    @Column(length = 6)
     private String zipCode;
 
     //bidirectional, mappedBy = "address"(address here is the field in Publisher class)

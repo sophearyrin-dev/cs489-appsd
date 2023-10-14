@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,9 +21,15 @@ public class Publisher {
 
     private String name;
 
+    //TODO: joinColumn for FK, nullable=true: address of Publisher can be null
     @OneToOne
-    @JoinColumn(name = "address_id", unique = true, nullable=false)
+    @JoinColumn(name = "address_id", unique = true, nullable=true)
     private Address address;
+
+
+    //TODO: @OneToMany: one Publisher to Many books
+    @OneToMany(mappedBy = "publisher")
+    private List<Book> books;
 
     public Publisher(String name, Address address) {
         this.name = name;
