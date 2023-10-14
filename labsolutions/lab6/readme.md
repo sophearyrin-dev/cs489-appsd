@@ -1,6 +1,9 @@
 Lab6: ADS System
 
-![img.png](img.png)
+![img.png](src/main/resources/static/images/img.png)
+
+![img_1.png](src/main/resources/static/images/img_1.png)
+
 + Tasks
   + Implemented the above UML class diagram in SpringBoot CLI
   + Applied top down implementation to generate table (write code first to generate table)
