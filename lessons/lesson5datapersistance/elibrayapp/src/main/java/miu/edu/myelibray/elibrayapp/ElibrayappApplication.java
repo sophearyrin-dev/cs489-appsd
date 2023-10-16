@@ -4,6 +4,8 @@ import miu.edu.myelibray.elibrayapp.model.Address;
 import miu.edu.myelibray.elibrayapp.model.Publisher;
 import miu.edu.myelibray.elibrayapp.repository.AddressRepository;
 import miu.edu.myelibray.elibrayapp.repository.PublisherRepository;
+import miu.edu.myelibray.elibrayapp.service.AddressService;
+import miu.edu.myelibray.elibrayapp.service.PublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +15,15 @@ import java.util.List;
 
 @SpringBootApplication
 public class ElibrayappApplication implements CommandLineRunner {
+
+    //PTOI principle: Program to Interface
+    private AddressService addressService;
+    private PublisherService publisherService;
+
+
+    public ElibrayappApplication(PublisherService publisherService){
+        this.publisherService = publisherService;
+    }
 
     @Autowired
     private AddressRepository addressRepository;
@@ -37,12 +48,12 @@ public class ElibrayappApplication implements CommandLineRunner {
         System.out.println(addresses);
     }
 
-//    public void insertPublisher(){
-//        Address address1 = new Address("89st","IL", "CA","76543");
-//        addressRepository.save(address1);
-//        Publisher publisher1 = new Publisher("A", address1);
-//        publisherRepository.save(publisher1);
-//
-//    }
+    public void insertPublisher(){
+        Address address1 = new Address("89st","IL", "CA","76543");
+        addressRepository.save(address1);
+        Publisher publisher1 = new Publisher("A", address1);
+        publisherRepository.save(publisher1);
+
+    }
 
 }

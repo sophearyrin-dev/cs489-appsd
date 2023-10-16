@@ -12,9 +12,11 @@
         <module name="studentapp" />
         <module name="eLibrary" />
         <module name="bank" />
+        <module name="citylibraryapp" />
         <module name="CustomerMGTCLIAPP" />
         <module name="lab1bsolution" />
         <module name="elibrayapp" />
+        <module name="citylibrarywebapi" />
         <module name="ADS_SpringApplication" />
         <module name="banking-cli-app" />
       </profile>
@@ -23,6 +25,8 @@
       <module name="ADS_SpringApplication" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
+      <module name="citylibraryapp" target="17" />
+      <module name="citylibrarywebapi" target="17" />
       <module name="CustomerMGTCLIAPP" target="17" />
       <module name="eLibrary" target="17" />
       <module name="elibrayapp" target="17" />
@@ -35,6 +39,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ADS_SpringApplication" options="-parameters" />
+      <module name="citylibraryapp" options="-parameters" />
+      <module name="citylibrarywebapi" options="-parameters" />
       <module name="eLibrary" options="-parameters" />
       <module name="elibrayapp" options="-parameters" />
       <module name="student-mongo" options="-parameters" />
