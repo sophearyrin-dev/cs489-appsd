@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,7 +16,7 @@ public class Surgery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int surgeryId;
+    private Integer surgeryId;
 
     private String name;
 
@@ -24,4 +26,22 @@ public class Surgery {
     @JoinColumn(name = "address_id", unique = true)
     private Address address;
 
+
+    @OneToMany(mappedBy = "surgery")
+    private List<Appointment> appointments;
+
+    @Override
+    public String toString() {
+        return "Surgery{" +
+                "surgeryId=" + surgeryId +
+                ", name='" + name + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
+
+    public Surgery(String name, String phoneNumber, Address address) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 }

@@ -40,3 +40,9 @@ Lab6: ADS System
         </dependency>
     ```
   
+#Tables
+![img_3.png](src/main/resources/static/images/img_3.png)
+
+# Result
+![img_2.png](src/main/resources/static/images/img_2.png)
+  
