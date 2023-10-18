@@ -1,9 +1,9 @@
-##Tasks:
+# Task
 ![img.png](img.png)
 
-##Framework: SpringBoot
+# Framework: SpringBoot
 
-##Dependencies
+# Dependencies
 - Lombok
 - MySQL
 - Spring Data JPA
