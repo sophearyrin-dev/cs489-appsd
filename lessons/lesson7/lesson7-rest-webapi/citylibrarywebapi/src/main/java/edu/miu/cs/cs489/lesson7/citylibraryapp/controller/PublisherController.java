@@ -1,5 +1,6 @@
 package edu.miu.cs.cs489.lesson7.citylibraryapp.controller;
 
+import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherRequest;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherResponse;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.exception.PublisherNotFoundException;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.model.Publisher;
@@ -39,8 +40,8 @@ public class PublisherController {
     }
 
     @PostMapping(value = "/new")
-    public ResponseEntity<Publisher> registerNewPublisher(@Valid @RequestBody Publisher newPublisher) {
-        return new ResponseEntity<>(publisherService.addNewPublisher(newPublisher), HttpStatus.CREATED);
+    public ResponseEntity<PublisherResponse> registerNewPublisher(@RequestBody @Valid PublisherRequest publisherRequest) {
+        return new ResponseEntity<>(publisherService.addNewPublisher(publisherRequest), HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/update/{publisherId}")

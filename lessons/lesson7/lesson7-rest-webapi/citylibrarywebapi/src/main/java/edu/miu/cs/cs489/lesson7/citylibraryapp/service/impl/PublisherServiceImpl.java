@@ -1,8 +1,10 @@
 package edu.miu.cs.cs489.lesson7.citylibraryapp.service.impl;
 
 import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.address.AddressResponse;
+import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherRequest;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherResponse;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.exception.PublisherNotFoundException;
+import edu.miu.cs.cs489.lesson7.citylibraryapp.model.Address;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.model.Publisher;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.repository.AddressRepository;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.repository.PublisherRepository;
@@ -40,19 +42,36 @@ public class PublisherServiceImpl implements PublisherService {
                 .map(p -> new PublisherResponse(
                         p.getPublisherId(),
                         p.getName(),
-                        new AddressResponse(
+                        (p.getPrimaryAddress()!=null)?new AddressResponse(
                                 p.getPrimaryAddress().getAddressId(),
                                 p.getPrimaryAddress().getStreet(),
                                 p.getPrimaryAddress().getCity(),
                                 p.getPrimaryAddress().getState(),
                                 p.getPrimaryAddress().getZipCode()
-                        )
+                        ):null
                 )).toList();
     }
 
     @Override
-    public Publisher addNewPublisher(Publisher newPublisher) {
-        return publisherRepository.save(newPublisher);
+    public PublisherResponse addNewPublisher(PublisherRequest publisherRequest) {
+        var newPublisher = new Publisher(null,
+                publisherRequest.name(), new Address(null,
+                publisherRequest.primaryAddress().street(),
+                publisherRequest.primaryAddress().city(),
+                publisherRequest.primaryAddress().state(),
+                publisherRequest.primaryAddress().zipCode()));
+        var savedPublisher =  publisherRepository.save(newPublisher);
+        return new PublisherResponse(
+                savedPublisher.getPublisherId(),
+                savedPublisher.getName(),
+                new AddressResponse(
+                        savedPublisher.getPrimaryAddress().getAddressId(),
+                        savedPublisher.getPrimaryAddress().getStreet(),
+                        savedPublisher.getPrimaryAddress().getCity(),
+                        savedPublisher.getPrimaryAddress().getState(),
+                        savedPublisher.getPrimaryAddress().getZipCode()
+                )
+        );
     }
 
     @Override
@@ -67,14 +86,24 @@ public class PublisherServiceImpl implements PublisherService {
         var publisher = publisherRepository.findById(publisherId).orElse(null);
         if(publisher != null ) {
             publisher.setName(editedPublisher.getName());
-            var address = publisher.getPrimaryAddress();
-            address.setStreet(editedPublisher.getPrimaryAddress().getStreet());
-            address.setCity(editedPublisher.getPrimaryAddress().getCity());
-            address.setState(editedPublisher.getPrimaryAddress().getState());
-            address.setZipCode(editedPublisher.getPrimaryAddress().getZipCode());
+            if(publisher.getPrimaryAddress()!=null) {
+                var address = publisher.getPrimaryAddress();
+                address.setStreet(editedPublisher.getPrimaryAddress().getStreet());
+                address.setCity(editedPublisher.getPrimaryAddress().getCity());
+                address.setState(editedPublisher.getPrimaryAddress().getState());
+                address.setZipCode(editedPublisher.getPrimaryAddress().getZipCode());
+            } else {
+                var newAddress = new Address();
+                newAddress.setStreet(editedPublisher.getPrimaryAddress().getStreet());
+                newAddress.setCity(editedPublisher.getPrimaryAddress().getCity());
+                newAddress.setState(editedPublisher.getPrimaryAddress().getState());
+                newAddress.setZipCode(editedPublisher.getPrimaryAddress().getZipCode());
+                newAddress.setPublisher(publisher);
+                publisher.setPrimaryAddress(newAddress);
+            }
             return publisherRepository.save(publisher);
         } else {
-            return publisher;
+            return null;
         }
     }
 
@@ -89,9 +118,13 @@ public class PublisherServiceImpl implements PublisherService {
         if(publisher != null) {
             var address = publisher.getPrimaryAddress();
             if(address != null) {
-                addressRepository.deleteById(address.getAddressId());
+//                addressRepository.deleteById(address.getAddressId());
+//                publisher.setPrimaryAddress(null);
+//                publisherRepository.save(publisher);
+
                 publisher.setPrimaryAddress(null);
                 publisherRepository.save(publisher);
+                addressRepository.deleteById(address.getAddressId());
             }
         }
     }

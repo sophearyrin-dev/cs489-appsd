@@ -1,5 +1,6 @@
 package edu.miu.cs.cs489.lesson7.citylibraryapp.service;
 
+import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherRequest;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.dto.publisher.PublisherResponse;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.exception.PublisherNotFoundException;
 import edu.miu.cs.cs489.lesson7.citylibraryapp.model.Publisher;
@@ -10,7 +11,7 @@ public interface PublisherService {
 
     List<PublisherResponse> getAllPublishers();
 
-    Publisher addNewPublisher(Publisher newPublisher);
+    PublisherResponse addNewPublisher(PublisherRequest publisherRequest);
 
     Publisher getPublisherId(Integer publisherId) throws PublisherNotFoundException;
 

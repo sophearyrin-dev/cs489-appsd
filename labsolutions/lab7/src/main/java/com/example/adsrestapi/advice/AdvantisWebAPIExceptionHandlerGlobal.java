@@ -1,7 +1,7 @@
 package com.example.adsrestapi.advice;
 
 import com.example.adsrestapi.exception.AddressNotFoundException;
-import jakarta.validation.ConstraintViolationException;
+import com.example.adsrestapi.exception.PatientNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -20,6 +20,18 @@ public class AdvantisWebAPIExceptionHandlerGlobal {
         Map<String,String> errorMessageMap = new HashMap<>();
 
         errorMessageMap.put("errorMessage",addressNotFoundException.getMessage());
+
+        return errorMessageMap;
+
+    }
+
+    @ExceptionHandler(PatientNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Map<String,String> handlePatientNotFoundException(PatientNotFoundException
+                                                                     patientNotFoundException){
+        Map<String,String> errorMessageMap = new HashMap<>();
+
+        errorMessageMap.put("errorMessage",patientNotFoundException.getMessage());
 
         return errorMessageMap;
 

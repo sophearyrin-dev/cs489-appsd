@@ -33,10 +33,10 @@ public class AddressServiceImpl implements AddressService {
                         a.getCity(),
                         a.getState(),
                         a.getZipCode(),
-                        new PublisherResponse2(
+                        (a.getPublisher()!= null)?new PublisherResponse2(
                                 a.getPublisher().getPublisherId(),
                                 a.getPublisher().getName()
-                        )
+                        ): null
                 )).toList();
     }
 

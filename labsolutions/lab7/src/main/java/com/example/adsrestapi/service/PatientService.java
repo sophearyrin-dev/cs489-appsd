@@ -1,16 +1,22 @@
 package com.example.adsrestapi.service;
 
+import com.example.adsrestapi.dto.patient.PatientRequest;
+import com.example.adsrestapi.dto.patient.PatientResponse;
+import com.example.adsrestapi.exception.PatientNotFoundException;
 import com.example.adsrestapi.model.Patient;
 
 import java.util.List;
 
 public interface PatientService {
 
-    List<Patient> getAllPatients();
+    List<PatientResponse> getAllPatients();
 
-    Patient addNewPatient(Patient newPatient);
+    PatientResponse addNewPatient(PatientRequest newPatient);
 
+    PatientResponse getPatientById(int patientId) throws PatientNotFoundException;
 
+    PatientResponse updatePatientById(PatientRequest patientRequest, int patientId) throws PatientNotFoundException;
 
+    void deletePatientById(int patientId) throws PatientNotFoundException;
 
 }
