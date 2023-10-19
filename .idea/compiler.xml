@@ -19,12 +19,14 @@
         <module name="citylibraryapp" />
         <module name="CustomerMGTCLIAPP" />
         <module name="adsrestapi" />
+        <module name="adsrestapi (1)" />
         <module name="elibrayapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ADS_SpringApplication" target="17" />
       <module name="adsrestapi" target="17" />
+      <module name="adsrestapi (1)" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="citylibraryapp" target="17" />
@@ -43,6 +45,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ADS_SpringApplication" options="-parameters" />
       <module name="adsrestapi" options="-parameters" />
+      <module name="adsrestapi (1)" options="-parameters" />
       <module name="citylibraryapp" options="-parameters" />
       <module name="citylibraryapp (1)" options="-parameters" />
       <module name="citylibrarywebapi" options="-parameters" />
