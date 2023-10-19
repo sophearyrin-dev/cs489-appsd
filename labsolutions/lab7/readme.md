@@ -14,4 +14,5 @@
 ![img_1.png](img_1.png)
 
 # Result
-labsolutions/lab7/src/main/resources/screenshot/lab7output_result.pdf
+resources/screenshot/lab7output_result.pdf
+[click here](https://github.com/sophearyrin-dev/cs489-appsd/blob/main/labsolutions/lab7/src/main/resources/screenshot/lab7output_result.pdf)
