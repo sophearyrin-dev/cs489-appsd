@@ -3,7 +3,6 @@ package com.example.adsrestapi.controller;
 import com.example.adsrestapi.dto.patient.PatientRequest;
 import com.example.adsrestapi.dto.patient.PatientResponse;
 import com.example.adsrestapi.exception.PatientNotFoundException;
-import com.example.adsrestapi.model.Patient;
 import com.example.adsrestapi.service.PatientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,10 +50,10 @@ public class PatientController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-//    @GetMapping("/search/{searchString}")
-//    public ResponseEntity<List<PatientResponse>> quickSearchPatient(@PathVariable String searchString){
-//        return new ResponseEntity<>(patientService.searchPatient(searchString), HttpStatus.FOUND);
-//    }
+    @GetMapping("/search/{searchString}")
+    public ResponseEntity<List<PatientResponse>> quickSearchPatient(@PathVariable String searchString){
+        return new ResponseEntity<>(patientService.searchPatient(searchString), HttpStatus.FOUND);
+    }
 
 
 }

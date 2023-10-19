@@ -14,11 +14,16 @@ public interface PatientRepository extends JpaRepository<Patient,Integer> {
 //            String name, String street, String city, String state
 //    );
 
-    List<Patient> findPatientsByFistNameContainingOrLastNameContainingOrPhoneNumberContainingOrEmailOrAddress_StreetOrAddress_CityOrAddress_StateOrAddress_ZipCode(
-            String firstName, String lastName, String phoneNumber, String email,
-            String street, String city, String state, String zipCode
+//    List<Patient> findPatientsByFistNameContainingOrLastNameContainingOrPhoneNumberContainingOrEmailOrAddress_StreetOrAddress_CityOrAddress_StateOrAddress_ZipCode(
+//            String firstName, String lastName, String phoneNumber, String email,
+//            String street, String city, String state, String zipCode
+//    );
+
+    List<Patient> findPatientsByFistNameContainingOrLastNameContainingOrPhoneNumberContainingOrEmailContainingOrPrimaryAddress_StreetOrPrimaryAddress_CityOrPrimaryAddress_State(
+            String fistName, String lastName, String phoneNumber, String email,
+            String street, String city, String state
     );
 
-//    List<PatientResponse> findPatientsByFistNameContaining(String firstName);
+//    List<Patient> findPatientsByFistNameContaining(String firstName);
 
 }

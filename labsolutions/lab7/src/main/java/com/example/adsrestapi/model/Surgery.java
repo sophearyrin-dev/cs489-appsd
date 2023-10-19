@@ -24,7 +24,7 @@ public class Surgery {
 
     @OneToOne()
     @JoinColumn(name = "address_id", unique = true)
-    private Address address;
+    private Address primaryAddress;
 
 
     @OneToMany(mappedBy = "surgery")
@@ -39,9 +39,9 @@ public class Surgery {
                 '}';
     }
 
-    public Surgery(String name, String phoneNumber, Address address) {
+    public Surgery(String name, String phoneNumber, Address primaryAddress) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.address = address;
+        this.primaryAddress = primaryAddress;
     }
 }

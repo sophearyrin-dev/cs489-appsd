@@ -1,5 +1,6 @@
 package com.example.adsrestapi.service;
 
+import com.example.adsrestapi.dto.address.AddressPatientResponse;
 import com.example.adsrestapi.dto.address.AddressRequest;
 import com.example.adsrestapi.dto.address.AddressResponse;
 import com.example.adsrestapi.exception.AddressNotFoundException;
@@ -18,6 +19,8 @@ public interface AddressService {
     AddressResponse updateAddress(AddressRequest addressRequest, int addressId) throws AddressNotFoundException;
 
     void deleteAddressById(int addressId) throws AddressNotFoundException;
+
+    List<AddressPatientResponse> findAllAddressPatient();
 
 
 }

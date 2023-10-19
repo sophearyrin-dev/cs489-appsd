@@ -18,6 +18,6 @@ public interface PatientService {
 
     void deletePatientById(int patientId) throws PatientNotFoundException;
 
-//    List<PatientResponse> searchPatient(String searchString);
+    List<PatientResponse> searchPatient(String searchString);
 
 }

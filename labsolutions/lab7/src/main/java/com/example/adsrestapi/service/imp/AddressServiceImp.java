@@ -1,6 +1,8 @@
 package com.example.adsrestapi.service.imp;
+import com.example.adsrestapi.dto.address.AddressPatientResponse;
 import com.example.adsrestapi.dto.address.AddressRequest;
 import com.example.adsrestapi.dto.address.AddressResponse;
+import com.example.adsrestapi.dto.patient.PatientResponse2;
 import com.example.adsrestapi.exception.AddressNotFoundException;
 import com.example.adsrestapi.model.Address;
 import com.example.adsrestapi.repository.AddressRepository;
@@ -8,7 +10,6 @@ import com.example.adsrestapi.service.AddressService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -121,5 +122,36 @@ public class AddressServiceImp implements AddressService {
         addressRepository.deleteById(addressId);
     }
 
+    @Override
+    public List<AddressPatientResponse> findAllAddressPatient() {
+        return addressRepository.findAll().stream()
+                .map(p -> {
+                    if(p.getPatient() == null){
+                        return new AddressPatientResponse(
+                                p.getAddressId(),
+                                p.getStreet(),
+                                p.getCity(),
+                                p.getState(),
+                                p.getZipCode(),
+                                null);
+                    } else {
+                    return new AddressPatientResponse(
+                            p.getAddressId(),
+                            p.getStreet(),
+                            p.getCity(),
+                            p.getState(),
+                            p.getZipCode(),
+                            new PatientResponse2(
+                                    p.getPatient().getPatientId(),
+                                    p.getPatient().getFistName(),
+                                    p.getPatient().getLastName(),
+                                    p.getPatient().getPhoneNumber(),
+                                    p.getPatient().getEmail(),
+                                    p.getPatient().getDob()
+                            )
+                    );}
+                }
+                ).collect(Collectors.toList());
+    }
 
 }

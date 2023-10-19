@@ -34,18 +34,18 @@ public class Patient {
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id", unique = true)
-    private Address address;
+    private Address primaryAddress;
 
     @OneToMany(mappedBy = "patient")
     private List<Appointment> appointments;
 
-    public Patient(String fistName, String lastName, String phoneNumber, String email, LocalDate dob, Address address) {
+    public Patient(String fistName, String lastName, String phoneNumber, String email, LocalDate dob, Address primaryAddress) {
         this.fistName = fistName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.dob = dob;
-        this.address = address;
+        this.primaryAddress = primaryAddress;
     }
 
     @Override

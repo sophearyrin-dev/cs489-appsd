@@ -1,6 +1,5 @@
 package com.example.adsrestapi.service.imp;
 
-import com.example.adsrestapi.dto.address.AddressRequest;
 import com.example.adsrestapi.dto.address.AddressResponse;
 import com.example.adsrestapi.dto.patient.PatientRequest;
 import com.example.adsrestapi.dto.patient.PatientResponse;
@@ -34,11 +33,11 @@ public class PatientServiceImp implements PatientService {
                         p.getEmail(),
                         p.getDob(),
                         new AddressResponse(
-                                p.getAddress().getAddressId(),
-                                p.getAddress().getStreet(),
-                                p.getAddress().getCity(),
-                                p.getAddress().getState(),
-                                p.getAddress().getZipCode()
+                                p.getPrimaryAddress().getAddressId(),
+                                p.getPrimaryAddress().getStreet(),
+                                p.getPrimaryAddress().getCity(),
+                                p.getPrimaryAddress().getState(),
+                                p.getPrimaryAddress().getZipCode()
                         )
                 )).collect(Collectors.toList());
     }
@@ -68,11 +67,11 @@ public class PatientServiceImp implements PatientService {
                 savedPatient.getEmail(),
                 savedPatient.getDob(),
                 new AddressResponse(
-                        savedPatient.getAddress().getAddressId(),
-                        savedPatient.getAddress().getStreet(),
-                        savedPatient.getAddress().getCity(),
-                        savedPatient.getAddress().getState(),
-                        savedPatient.getAddress().getZipCode()
+                        savedPatient.getPrimaryAddress().getAddressId(),
+                        savedPatient.getPrimaryAddress().getStreet(),
+                        savedPatient.getPrimaryAddress().getCity(),
+                        savedPatient.getPrimaryAddress().getState(),
+                        savedPatient.getPrimaryAddress().getZipCode()
                 )
         );
         return patientResponse;
@@ -92,11 +91,11 @@ public class PatientServiceImp implements PatientService {
                 patient.getEmail(),
                 patient.getDob(),
                 new AddressResponse(
-                        patient.getAddress().getAddressId(),
-                        patient.getAddress().getStreet(),
-                        patient.getAddress().getCity(),
-                        patient.getAddress().getState(),
-                        patient.getAddress().getZipCode()
+                        patient.getPrimaryAddress().getAddressId(),
+                        patient.getPrimaryAddress().getStreet(),
+                        patient.getPrimaryAddress().getCity(),
+                        patient.getPrimaryAddress().getState(),
+                        patient.getPrimaryAddress().getZipCode()
                 )
 
         );
@@ -118,7 +117,8 @@ public class PatientServiceImp implements PatientService {
         patient.setEmail(patientRequest.email());
         patient.setDob(patientRequest.dob());
 
-        patient.setAddress(new Address(
+        patient.setPrimaryAddress(new Address(
+                patient.getPrimaryAddress().getAddressId(),
                 patientRequest.primaryAddress().street(),
                 patientRequest.primaryAddress().city(),
                 patientRequest.primaryAddress().state(),
@@ -136,11 +136,11 @@ public class PatientServiceImp implements PatientService {
                 updatedPatient.getEmail(),
                 updatedPatient.getDob(),
                 new AddressResponse(
-                        updatedPatient.getAddress().getAddressId(),
-                        updatedPatient.getAddress().getStreet(),
-                        updatedPatient.getAddress().getCity(),
-                        updatedPatient.getAddress().getState(),
-                        updatedPatient.getAddress().getZipCode()
+                        updatedPatient.getPrimaryAddress().getAddressId(),
+                        updatedPatient.getPrimaryAddress().getStreet(),
+                        updatedPatient.getPrimaryAddress().getCity(),
+                        updatedPatient.getPrimaryAddress().getState(),
+                        updatedPatient.getPrimaryAddress().getZipCode()
                 )
         );
 
@@ -156,26 +156,27 @@ public class PatientServiceImp implements PatientService {
         patientRepository.deleteById(patientId);
     }
 
-//    @Override
-//    public List<PatientResponse> searchPatient(String searchString) {
-//
-//        return patientRepository.findPatientsByFistNameContaining(searchString).stream()
-//                .map(p -> new PatientResponse(
-//                        p.patientId(),
-//                        p.fistName(),
-//                        p.lastName(),
-//                        p.phoneNumber(),
-//                        p.email(),
-//                        p.dob(),
-//                        new AddressResponse(
-//                                p.primaryAddress().addressId(),
-//                                p.primaryAddress().street(),
-//                                p.primaryAddress().city(),
-//                                p.primaryAddress().state(),
-//                                p.primaryAddress().zipCode()
-//                        )
-//                )).collect(Collectors.toList());
-//    }
+    @Override
+    public List<PatientResponse> searchPatient(String searchString) {
+
+        return patientRepository.findPatientsByFistNameContainingOrLastNameContainingOrPhoneNumberContainingOrEmailContainingOrPrimaryAddress_StreetOrPrimaryAddress_CityOrPrimaryAddress_State(
+                searchString,searchString,searchString,searchString,searchString,searchString,searchString).stream()
+                .map(p -> new PatientResponse(
+                        p.getPatientId(),
+                        p.getFistName(),
+                        p.getLastName(),
+                        p.getPhoneNumber(),
+                        p.getEmail(),
+                        p.getDob(),
+                        new AddressResponse(
+                                p.getPrimaryAddress().getAddressId(),
+                                p.getPrimaryAddress().getStreet(),
+                                p.getPrimaryAddress().getCity(),
+                                p.getPrimaryAddress().getState(),
+                                p.getPrimaryAddress().getZipCode()
+                        )
+                )).collect(Collectors.toList());
+    }
 
 
 }

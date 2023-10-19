@@ -1,5 +1,6 @@
 package com.example.adsrestapi.controller;
 
+import com.example.adsrestapi.dto.address.AddressPatientResponse;
 import com.example.adsrestapi.dto.address.AddressResponse;
 import com.example.adsrestapi.exception.AddressNotFoundException;
 import com.example.adsrestapi.service.AddressService;
@@ -21,10 +22,10 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @GetMapping("/list")
-    public ResponseEntity<List<AddressResponse>> getAllAddresses(){
-        return ResponseEntity.ok(addressService.getAllAddresses());
-    }
+//    @GetMapping("/list")
+//    public ResponseEntity<List<AddressResponse>> getAllAddresses(){
+//        return ResponseEntity.ok(addressService.getAllAddresses());
+//    }
 
 
     @PostMapping("/new")
@@ -49,6 +50,11 @@ public class AddressController {
     public ResponseEntity<Void> deleteAddressById(@PathVariable int addressId) throws AddressNotFoundException{
         addressService.deleteAddressById(addressId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping("/list")
+    public ResponseEntity<List<AddressPatientResponse>> getAllAddressPatients(){
+        return new ResponseEntity<>(addressService.findAllAddressPatient(), HttpStatus.FOUND);
     }
 
 
