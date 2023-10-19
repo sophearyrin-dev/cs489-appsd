@@ -7,6 +7,7 @@ import com.example.adsrestapi.exception.AddressNotFoundException;
 import com.example.adsrestapi.model.Address;
 import com.example.adsrestapi.repository.AddressRepository;
 import com.example.adsrestapi.service.AddressService;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -124,7 +125,7 @@ public class AddressServiceImp implements AddressService {
 
     @Override
     public List<AddressPatientResponse> findAllAddressPatient() {
-        return addressRepository.findAll().stream()
+        return addressRepository.findAll(Sort.by("city")).stream()
                 .map(p -> {
                     if(p.getPatient() == null){
                         return new AddressPatientResponse(
