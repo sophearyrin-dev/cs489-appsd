@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/18.0.2.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire/surefirebooter11832975002140659186.jar /Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire 2023-10-20T11-45-23_334-jvmRun1 surefire6751307795295839311tmp surefire_015130064449673304480tmp"/>
+    <property name="sun.java.command" value="/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire/surefirebooter13994197287446597068.jar /Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire 2023-10-20T14-04-18_806-jvmRun1 surefire1829574793302936454tmp surefire_017478305539020129651tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/test-classes:/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/classes:/Users/sophearyrin/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/sophearyrin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire/surefirebooter11832975002140659186.jar"/>
+    <property name="surefire.real.class.path" value="/Users/sophearyrin/Documents/Pheary_MIU/DE courses/On-Campus course/CS489/cs489-appsd/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/target/surefire/surefirebooter13994197287446597068.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="18.0.2.1+0"/>
@@ -56,5 +56,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="edu.miu.cs489.AppTest" time="0.006"/>
+  <testcase name="shouldAnswerWithTrue" classname="edu.miu.cs489.AppTest" time="0.009"/>
 </testsuite>

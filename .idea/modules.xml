@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" filepath="$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab7/adsrestapi.iml" filepath="$PROJECT_DIR$/labsolutions/lab7/adsrestapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab9security/adslab9security/adsrestapi (1).iml" filepath="$PROJECT_DIR$/labsolutions/lab9security/adslab9security/adsrestapi (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab10/lab7/adsrestapi (2).iml" filepath="$PROJECT_DIR$/labsolutions/lab10/lab7/adsrestapi (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" filepath="$PROJECT_DIR$/sophearyquiz1/quiz1new/bank.iml" />
       <module fileurl="file://$PROJECT_DIR$/bankapplication/bankapplication.iml" filepath="$PROJECT_DIR$/bankapplication/bankapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/sophearyquiz1/professorsolutionquiz1/Quiz1/banking-cli-app/banking-cli-app.iml" filepath="$PROJECT_DIR$/sophearyquiz1/professorsolutionquiz1/Quiz1/banking-cli-app/banking-cli-app.iml" />
@@ -15,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/cs489-appsd.iml" filepath="$PROJECT_DIR$/.idea/cs489-appsd.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" filepath="$PROJECT_DIR$/labsolutions/Lab3and4Solution/1a.Create Spring Application/project/eLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" filepath="$PROJECT_DIR$/lessons/lesson5datapersistance/elibrayapp/elibrayapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/helloworlddocker.iml" filepath="$PROJECT_DIR$/labsolutions/lab10/demo-java-cli-app-containerized-using-jetbrains-intellij-docker/helloworlddocker/helloworlddocker.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" filepath="$PROJECT_DIR$/labsolutions/lab1bsolution/lab1bsolution.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" filepath="$PROJECT_DIR$/lessons/lesson5-mongodb/student-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/midterm/supplierproductapplication.iml" filepath="$PROJECT_DIR$/midterm/supplierproductapplication.iml" />

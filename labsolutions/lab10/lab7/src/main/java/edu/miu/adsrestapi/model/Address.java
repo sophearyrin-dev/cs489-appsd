@@ -1,5 +1,6 @@
 package com.example.adsrestapi.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,13 +29,21 @@ public class Address {
     @Column(length = 5)
     private String zipCode;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne(mappedBy = "primaryAddress")
     private Surgery surgery;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne(mappedBy = "primaryAddress")
     private Patient patient;
 
     public Address(String street, String city, String state, String zipCode) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+    }
+
+    public Address(Integer addressId, String street, String city, String state, String zipCode) {
+        this.addressId = addressId;
         this.street = street;
         this.city = city;
         this.state = state;

@@ -15,18 +15,21 @@
         <module name="ADS_SpringApplication" />
         <module name="banking-cli-app" />
         <module name="citylibraryapp (1)" />
+        <module name="helloworlddocker" />
         <module name="bank" />
         <module name="citylibraryapp" />
         <module name="CustomerMGTCLIAPP" />
         <module name="adsrestapi" />
         <module name="adsrestapi (1)" />
         <module name="elibrayapp" />
+        <module name="adsrestapi (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ADS_SpringApplication" target="17" />
       <module name="adsrestapi" target="17" />
       <module name="adsrestapi (1)" target="17" />
+      <module name="adsrestapi (2)" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="citylibraryapp" target="17" />
@@ -35,6 +38,7 @@
       <module name="CustomerMGTCLIAPP" target="17" />
       <module name="eLibrary" target="17" />
       <module name="elibrayapp" target="17" />
+      <module name="helloworlddocker" target="17" />
       <module name="lab1bsolution" target="10" />
       <module name="student-mongo" target="17" />
       <module name="studentapp" target="17" />
@@ -46,6 +50,7 @@
       <module name="ADS_SpringApplication" options="-parameters" />
       <module name="adsrestapi" options="-parameters" />
       <module name="adsrestapi (1)" options="-parameters" />
+      <module name="adsrestapi (2)" options="-parameters" />
       <module name="citylibraryapp" options="-parameters" />
       <module name="citylibraryapp (1)" options="-parameters" />
       <module name="citylibrarywebapi" options="-parameters" />
