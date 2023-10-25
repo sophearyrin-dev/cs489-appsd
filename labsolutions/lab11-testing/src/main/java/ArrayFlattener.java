@@ -9,14 +9,4 @@ public class ArrayFlattener {
                 .toArray();
     }
 
-    public static void main(String[] args) {
-
-        int[][] inputArray = {{1, 3}, {0}, {4, 5, 9}};
-        int[] flattenedArray = flattenArray(inputArray);
-        System.out.print("Flattened Array: ");
-        System.out.println(Arrays.toString(flattenedArray));
-
-    }
-
-
 }
