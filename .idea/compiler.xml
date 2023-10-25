@@ -10,6 +10,7 @@
         <module name="student-mongo" />
         <module name="supplierproductapplication" />
         <module name="eLibrary" />
+        <module name="ArrayReversor" />
         <module name="lab1bsolution" />
         <module name="citylibrarywebapi" />
         <module name="ADS_SpringApplication" />
@@ -18,7 +19,6 @@
         <module name="helloworlddocker" />
         <module name="bank" />
         <module name="citylibraryapp" />
-        <module name="arithmeticsampletest" />
         <module name="CustomerMGTCLIAPP" />
         <module name="adsrestapi" />
         <module name="ArrayFlattenerPart1" />
@@ -34,6 +34,7 @@
       <module name="adsrestapi (2)" target="17" />
       <module name="arithmeticsampletest" target="17" />
       <module name="ArrayFlattenerPart1" target="17" />
+      <module name="ArrayReversor" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="citylibraryapp" target="17" />
