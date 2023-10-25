@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab6/ADS_SpringApplication.iml" filepath="$PROJECT_DIR$/labsolutions/lab6/ADS_SpringApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsolutions/lab11-testing/ArrayFlattenerPart1.iml" filepath="$PROJECT_DIR$/labsolutions/lab11-testing/ArrayFlattenerPart1.iml" />
       <module fileurl="file://$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" filepath="$PROJECT_DIR$/lessons/lesson1b-build-automation/CustomerMGTCLIAPP.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab7/adsrestapi.iml" filepath="$PROJECT_DIR$/labsolutions/lab7/adsrestapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/labsolutions/lab9security/adslab9security/adsrestapi (1).iml" filepath="$PROJECT_DIR$/labsolutions/lab9security/adslab9security/adsrestapi (1).iml" />

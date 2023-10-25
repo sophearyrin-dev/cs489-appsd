@@ -21,6 +21,7 @@
         <module name="arithmeticsampletest" />
         <module name="CustomerMGTCLIAPP" />
         <module name="adsrestapi" />
+        <module name="ArrayFlattenerPart1" />
         <module name="adsrestapi (1)" />
         <module name="elibrayapp" />
         <module name="adsrestapi (2)" />
@@ -32,6 +33,7 @@
       <module name="adsrestapi (1)" target="17" />
       <module name="adsrestapi (2)" target="17" />
       <module name="arithmeticsampletest" target="17" />
+      <module name="ArrayFlattenerPart1" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="citylibraryapp" target="17" />
