@@ -18,6 +18,7 @@
         <module name="helloworlddocker" />
         <module name="bank" />
         <module name="citylibraryapp" />
+        <module name="arithmeticsampletest" />
         <module name="CustomerMGTCLIAPP" />
         <module name="adsrestapi" />
         <module name="adsrestapi (1)" />
@@ -30,6 +31,7 @@
       <module name="adsrestapi" target="17" />
       <module name="adsrestapi (1)" target="17" />
       <module name="adsrestapi (2)" target="17" />
+      <module name="arithmeticsampletest" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
       <module name="citylibraryapp" target="17" />
@@ -51,6 +53,7 @@
       <module name="adsrestapi" options="-parameters" />
       <module name="adsrestapi (1)" options="-parameters" />
       <module name="adsrestapi (2)" options="-parameters" />
+      <module name="arithmeticsampletest" options="-parameters" />
       <module name="citylibraryapp" options="-parameters" />
       <module name="citylibraryapp (1)" options="-parameters" />
       <module name="citylibrarywebapi" options="-parameters" />
