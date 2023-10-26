@@ -11,6 +11,5 @@
 ## Test Coverage Result
 ![img.png](ArrayFlattener/img.png)
 
-
 ## Ex2 Result 100% Test coverage : Reverse ArrayFlatener
 ![img.png](img.png)
