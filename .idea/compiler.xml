@@ -26,6 +26,7 @@
         <module name="elibrayapp" />
         <module name="adsrestapi (3)" />
         <module name="adsrestapi (2)" />
+        <module name="adsrestapi (4)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,6 +35,7 @@
       <module name="adsrestapi (1)" target="17" />
       <module name="adsrestapi (2)" target="17" />
       <module name="adsrestapi (3)" target="17" />
+      <module name="adsrestapi (4)" target="17" />
       <module name="arithmeticsampletest" target="17" />
       <module name="ArrayFlattenerPart1" target="17" />
       <module name="ArrayReversor" target="17" />
@@ -59,6 +61,7 @@
       <module name="adsrestapi (1)" options="-parameters" />
       <module name="adsrestapi (2)" options="-parameters" />
       <module name="adsrestapi (3)" options="-parameters" />
+      <module name="adsrestapi (4)" options="-parameters" />
       <module name="arithmeticsampletest" options="-parameters" />
       <module name="citylibraryapp" options="-parameters" />
       <module name="citylibraryapp (1)" options="-parameters" />
