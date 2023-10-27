@@ -16,3 +16,8 @@
 # Result
 resources/screenshot/lab7output_result.pdf
 [click here](https://github.com/sophearyrin-dev/cs489-appsd/blob/main/labsolutions/lab7/src/main/resources/screenshot/lab7output_result.pdf)
+
+
+# Azure Cloud
+Link to my Lab12 link:
+[click here](https://github.com/sophearyrin-dev/advantiswebapi)
