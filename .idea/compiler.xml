@@ -10,12 +10,14 @@
         <module name="student-mongo" />
         <module name="supplierproductapplication" />
         <module name="eLibrary" />
+        <module name="practice" />
         <module name="ArrayReversor" />
         <module name="lab1bsolution" />
         <module name="citylibrarywebapi" />
         <module name="ADS_SpringApplication" />
         <module name="banking-cli-app" />
         <module name="citylibraryapp (1)" />
+        <module name="srmwebapi" />
         <module name="helloworlddocker" />
         <module name="bank" />
         <module name="citylibraryapp" />
@@ -49,6 +51,8 @@
       <module name="elibrayapp" target="17" />
       <module name="helloworlddocker" target="17" />
       <module name="lab1bsolution" target="10" />
+      <module name="practice" target="17" />
+      <module name="srmwebapi" target="17" />
       <module name="student-mongo" target="17" />
       <module name="studentapp" target="17" />
       <module name="supplierproductapplication" target="17" />
@@ -68,6 +72,8 @@
       <module name="citylibrarywebapi" options="-parameters" />
       <module name="eLibrary" options="-parameters" />
       <module name="elibrayapp" options="-parameters" />
+      <module name="practice" options="-parameters" />
+      <module name="srmwebapi" options="-parameters" />
       <module name="student-mongo" options="-parameters" />
       <module name="studentapp" options="-parameters" />
     </option>
