@@ -11,6 +11,7 @@
         <module name="supplierproductapplication" />
         <module name="eLibrary" />
         <module name="practice" />
+        <module name="CAMSYS614133" />
         <module name="ArrayReversor" />
         <module name="lab1bsolution" />
         <module name="citylibrarywebapi" />
@@ -43,6 +44,7 @@
       <module name="ArrayReversor" target="17" />
       <module name="bank" target="17" />
       <module name="banking-cli-app" target="17" />
+      <module name="CAMSYS614133" target="17" />
       <module name="citylibraryapp" target="17" />
       <module name="citylibraryapp (1)" target="17" />
       <module name="citylibrarywebapi" target="17" />
@@ -61,6 +63,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ADS_SpringApplication" options="-parameters" />
+      <module name="CAMSYS614133" options="-parameters" />
       <module name="adsrestapi" options="-parameters" />
       <module name="adsrestapi (1)" options="-parameters" />
       <module name="adsrestapi (2)" options="-parameters" />

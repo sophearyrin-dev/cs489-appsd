@@ -19,7 +19,6 @@ public class AdsrestapiApplication {
 
     private UserRepository userRepository;
 
-
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
 
