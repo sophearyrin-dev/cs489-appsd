@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="student-mongo" />
         <module name="supplierproductapplication" />
+        <module name="TutorialTag" />
         <module name="eLibrary" />
         <module name="practice" />
         <module name="CAMSYS614133" />
@@ -58,12 +59,14 @@
       <module name="student-mongo" target="17" />
       <module name="studentapp" target="17" />
       <module name="supplierproductapplication" target="17" />
+      <module name="TutorialTag" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ADS_SpringApplication" options="-parameters" />
       <module name="CAMSYS614133" options="-parameters" />
+      <module name="TutorialTag" options="-parameters" />
       <module name="adsrestapi" options="-parameters" />
       <module name="adsrestapi (1)" options="-parameters" />
       <module name="adsrestapi (2)" options="-parameters" />
